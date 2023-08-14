@@ -17,13 +17,13 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @NotEmpty(message = "Name should not be empty")
-    @Column(columnDefinition = "varchar(15) unique not null")
+    @Column(columnDefinition = "varchar(15) not null")
     private String name;
     @NotEmpty(message = "username should not be empty")
     @Column(columnDefinition = "varchar(20) unique not null")
     private String username;
     @NotEmpty(message = "password should not be empty")
-    @Column(columnDefinition = "varchar(20) not null")
+    @Column(columnDefinition = "varchar(20) unique not null")
     private String password;
     @Email
     @NotEmpty(message = "email should not be empty")
